@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #b29ae9;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            background-color: white;
+            width: 60%;
+            height: auto;
+            margin-top: 30px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header h1{
+            margin-bottom: 5px;
+        }
+        small{
+            color: gray;
+            margin-bottom: 20px;
+        }
+        hr{
+            width: 100%;
+        }
+        .main-box{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        input,select{
+            width: 350px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 3px;
+            border: 1px solid gray;
+        }
+        small{
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        ::placeholder{
+            padding-left: 10px;
+        }
+        #radio{
+            width: 13px;
+            height: auto;
+            padding: 0;
+        }
+        .gender-box{
+            width: 90%;
+        }
+        #radio,select,button{
+            cursor: pointer;
+        }
+        .city{
+            width: 90%;
+            margin: 10px;
+        }
+        .time-box{
+            width: 350px;
+        }
+        .timer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .timer button{
+            height: 30px;
+            width: 150px;
+            margin: 5px;
+            border: 2px solid rgb(115, 115, 255);
+            color: blue;
+            border-radius: 5px;
+        }
+        .upload-resume{
+            width: 90%;
+        }
+        .upload-file{
+            border: 2px dashed gray;
+            margin: 10px 0px 30px 0px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            height: 130px;
+        }
+        .upload-file p{
+            margin-bottom: 5px;
+        }
+        .upload-file span{
+            color: gray;
+            font-size: small;
+        }
+        .upload-file i{
+            font-size: x-large;
+            color: gray;
+        }
+        .upload-file input{
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        #applyBtn{
+            color: white;
+            background-color: #808080;
+            height: 35px;
+            width: 200px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Job Application Form</h1>
+            <small>please Fill out the Form below to Submit your Application!</small>
+            <hr>
+        </div>
+        <div class="content">
+            <div class="main-box">
+                <div class="box">
+                    <label for="">Name</label>
+                    <input type="text" name="firstname">
+                    <small>Full name</small>
+                </div>
+                <div class="box">
+                    <br>
+                    <input type="text" name="lastname">
+                    <small>Last name</small>
+                </div>
+            </div>
+
+            <div class="main-box">
+                <div class="box">
+                    <label for="">E-mail</label>
+                    <input type="email" name="email" placeholder="ex: myname@example.com">
+                    <small>example@example.com</small>
+                </div>
+                <div class="box">
+                    <label for="">Phone Number</label>
+                    <input type="tel" name="phone" placeholder="000-000-0000">
+                </div>
+            </div>
+
+            <div class="gender-box">
+                <label for="">Gender</label><br>
+                <input type="radio" name="gender" id="radio"> Male <br>
+                <input type="radio" name="gender" id="radio"> Female <br>
+                <input type="radio" name="gender" id="radio"> Transgender</p> 
+            </div>
+
+            <div class="city">
+                <label for="">Current City</label><br>
+                <select name="city" id="">
+                    <option>Tirunelveli</option>
+                    <option>Tiruchi</option>
+                    <option>Madurai</option>
+                    <option>Chennai</option>
+                    <option>Coimbothur</option>
+                    <option>Selam</option>
+                </select>
+            </div>
+
+            <div class="main-box">
+                <div class="box">
+                    <label for="">Apllied Position</label>
+                    <input type="text" name="Position" >
+                </div>
+                <div class="box">
+                    <label for="">Earliest Possibel Start Date</label>
+                    <input type="date" name="startDate">
+                    <small>Date</small>
+                </div>
+            </div>
+            <div class="main-box">
+                <div class="box">
+                    <label for="">Preferred Interview Date</label>
+                    <input type="date" id="interviewDate"  >
+                </div>
+                <div class="time-box">
+                    <label for="">Monday, March 27</label><br>
+                    <div class="timer">
+                        <button>11:30 AM</button>
+                        <button>12:30 PM</button>
+                        <button>1:30 PM</button>
+                        <button>4:30 PM</button>
+                        <button>5:30 PM</button>
+                        <button>6:30 PM</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-resume">
+                <label for="">Upload Resume</label>
+                <div class="upload-file">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Upload a File</p>
+                    <span>Drag and drop a file here</span>
+                    <input type="file" name="" id="resume-upload">
+                </div>
+            </div>
+
+            <button id="applyBtn">Apply</button>
+        </div>
+    </div>
+</body>
+</html>
